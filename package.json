@@ -1,0 +1,14 @@
+{
+  "name": "thebankperry",
+  "version": "1.0.0",
+  "description": "The Bank Perry Telegram Bot Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Rohitt Vashishtha",
+  "license": "ISC",
+  "dependencies": {
+    "telegram-bot-api": "^1.1.0"
+  }
+}
