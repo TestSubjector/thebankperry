@@ -1,0 +1,18 @@
+{
+    message_id: 31,
+    from: {
+        id: 110532437,
+        first_name: 'Rohitt',
+        last_name: 'Vashishtha',
+        username: 'vagrantrohitt'
+    },
+    chat: {
+        id: 110532437,
+        first_name: 'Rohitt',
+        last_name: 'Vashishtha',
+        username: 'vagrantrohitt',
+        type: 'private'
+    },
+    date: 1464691164,
+    text: 'Hi'
+}
