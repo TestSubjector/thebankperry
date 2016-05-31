@@ -15,4 +15,8 @@ bot.on('message', function (message) {
             console.log(err);
         })
     })
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> newtest/newtes
