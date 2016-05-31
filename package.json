@@ -2,7 +2,7 @@
   "name": "thebankperry",
   "version": "1.0.0",
   "description": "The Bank Perry Telegram Bot Project",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "test": "test"
   },
