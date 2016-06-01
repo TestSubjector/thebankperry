@@ -1,6 +1,6 @@
 #bot configuration file
 /conf.js
-
+node_modules/*
 # Logs
 logs
 *.log
