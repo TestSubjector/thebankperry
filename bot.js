@@ -5,9 +5,17 @@ conf.updates = {
     enabled: true,
     get_interval: 1000
 };
+
 var Telegram = require('telegram-bot-api');
 var bot = new Telegram(conf);
 console.log("Telegram: Bot started.");
+
+var mike = require("./lib/mike");
+mike.setBroadcastBot(bot);
+mike.webServer.listen(3000, function () {
+    console.log('Express: Mike listening on port 3000.');
+});
+
 var mongoose = require('mongoose');
     mongoose.connect('mongodb://localhost/thebankperry', function (err) {
         if (err) {
