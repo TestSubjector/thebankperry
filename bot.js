@@ -17,7 +17,7 @@ mike.webServer.listen(3000, function () {
 });
 
 var mongoose = require('mongoose');
-    mongoose.connect('mongodb://localhost/thebankperry', function (err) {
+    mongoose.connect(conf.dbpath+conf.dbname, function (err) {
         if (err) {
             console.log('MongoDB: connection error', err);
         } else {
