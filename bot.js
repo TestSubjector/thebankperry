@@ -7,16 +7,20 @@ conf.updates = {
 };
 var Telegram = require('telegram-bot-api');
 var bot = new Telegram(conf);
-console.log("Bot started.");
-
+console.log("Telegram: Bot started.");
+var mongoose = require('mongoose');
+    mongoose.connect('mongodb://localhost/thebankperry', function (err) {
+        if (err) {
+            console.log('MongoDB: connection error', err);
+        } else {
+            console.log('MongoDB: connection successful');
+        }
+    });
 bot.on('message', function (message) {
     botlogic(message, function sendMessage(msg) {
+        console.log("REPLY: ", msg.text);
         bot.sendMessage(msg).catch(function (err) {
             console.log(err);
         })
     })
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> newtest/newtes
