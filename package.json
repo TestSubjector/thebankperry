@@ -9,6 +9,7 @@
   "author": "Rohitt Vashishtha",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.4",
     "mongodb": "^2.1.21",
     "mongoose": "^4.4.19",
     "telegram-bot-api": "^1.1.0"
