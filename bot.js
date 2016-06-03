@@ -28,7 +28,7 @@ mongoose.connect(conf.dbpath + conf.dbname, function (err) {
     }
 });
 bot.on('message', function (message) {
-    botMessageProcessor(message, function sendMessage(msg) {
+    botMessageProcessor(message, function(msg) {
         console.log("REPLY: ", msg.text);
         bot.sendMessage(msg).catch(function (err) {
             console.log(err);
