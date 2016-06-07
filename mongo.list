@@ -195,3 +195,17 @@ db.accounts.insert({
         amount: 2245
     }]
 });
+db.accounts.insert({
+    telegramid: "",
+    accno: "1357924680",
+    email: "nischaypro@yahoo.co.in",
+    customername: "Nischay Ram Mamidi",
+    balance: 60848,
+    phone: "9848167747",
+    transactions: [{
+        timestamp: "2016-06-06T21:26:17Z",
+        type: "debit",
+        with: "1928374650",
+        amount: 1000
+}]
+});
