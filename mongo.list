@@ -1,0 +1,197 @@
+db.atms.insert({
+    name: "ATM Null",
+    latitude: "0.0",
+    longitude: "0.0",
+    status: "inactive"
+});
+db.atms.insert({
+    name: "ATM Stockholm",
+    latitude: "52.20",
+    longitude: "18.04",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Barrow",
+    latitude: "71.18",
+    longitude: "-156.46",
+    status: "inactive"
+});
+db.atms.insert({
+    name: "ATM Fort McMurray",
+    latitude: "56.44",
+    longitude: "-111.23",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Astana",
+    latitude: "51.10",
+    longitude: "71.26",
+    status: "inactive"
+});
+db.atms.insert({
+    name: "ATM Paris",
+    latitude: "48.51",
+    longitude: "2.21",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Chiba",
+    latitude: "35.36",
+    longitude: "140.06",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM New Delhi",
+    latitude: "28.37",
+    longitude: "77.13",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Miami",
+    latitude: "25.47",
+    longitude: "-80.13",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Hyderabad",
+    latitude: "25.23",
+    longitude: "68.22",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Nagpur",
+    latitude: "21.08",
+    longitude: "79.05",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Mumbai",
+    latitude: "18.59",
+    longitude: "72.50",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Chennai",
+    latitude: "13.05",
+    longitude: "80.16",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Bangalore",
+    latitude: "12.58",
+    longitude: "77.34",
+    status: "inactive"
+});
+db.atms.insert({
+    name: "ATM Panama City",
+    latitude: "8.59",
+    longitude: "-79.31",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Jakarta",
+    latitude: "-6.12",
+    longitude: "106.48",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Livingstone",
+    latitude: "-17.51",
+    longitude: "25.52",
+    status: "inactive"
+});
+db.atms.insert({
+    name: "ATM Rio de Janeiro",
+    latitude: "-22.55",
+    longitude: "-43.12",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Santa Fe",
+    latitude: "-31.38",
+    longitude: "-60.42",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Cape Town",
+    latitude: "-33.56",
+    longitude: "18.25",
+    status: "active"
+});
+db.atms.insert({
+    name: "ATM Christchurch",
+    latitude: "-43.32",
+    longitude: "172.37",
+    status: "active"
+});
+db.accounts.insert({
+    telegramid: "123456789",
+    accno: "1234567890",
+    email: "dummy123@gmail.com",
+    customername: "dummyuser",
+    balance: 42,
+    phone: "9876543210",
+    transactions: []
+});
+db.accounts.insert({
+    telegramid: "192837465",
+    accno: "1928374650",
+    email: "strikefromthedark@gmail.com",
+    customername: "Cyelnt Blad",
+    balance: 131313,
+    phone: "9876543210",
+    transactions: [{
+        timestamp: "2016-06-06T21:26:17Z",
+        type: "credit",
+        with: "1357924680",
+        amount: 500
+    }]
+});
+db.accounts.insert({
+    telegramid: "135792468",
+    accno: "1357924680 ",
+    email: "upintheclouds99@gmail.com",
+    customername: "Drem Mchin",
+    balance: 10,
+    phone: "6666666666",
+    transactions: [{
+        timestamp: "2016-06-06T21:26:17Z",
+        type: "debit",
+        with: "1928374650",
+        amount: 500
+    }]
+});
+db.accounts.insert({
+    telegramid: "124836957",
+    accno: "1248369570",
+    email: "simplleid987@gmail.com",
+    customername: "Rohitt Vashishtha",
+    balance: 8000,
+    phone: "917730013175",
+    transactions: [{
+            timestamp: "2016-06-04T05:23:56Z",
+            type: "credit",
+            with: "4528461967",
+            amount: 1000
+        },
+        {
+            timestamp: "2016-06-05T21:26:17Z",
+            type: "credit",
+            with: "7526651545",
+            amount: 7000
+        }]
+});
+db.accounts.insert({
+    telegramid: "111333999",
+    accno: "1113339990",
+    email: "hiddenfromall@gmail.com",
+    customername: "Ano Nimus",
+    balance: 99999,
+    phone: "9810335623",
+    transactions: [{
+        timestamp: "2016-06-01T11:42:33Z",
+        type: "credit",
+        with: "4839274920",
+        amount: 2245
+    }]
+});
