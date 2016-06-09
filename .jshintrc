@@ -3,7 +3,9 @@
   "eqnull": true,
   "eqeqeq": true,
   "undef": true,
+  "esversion": 6,
   "globals": {
+    "esversion": 6,    
     "nodejs": true
   }
 }
