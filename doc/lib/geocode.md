@@ -11,8 +11,8 @@ This file provides the following location services for the bot:
 
 ## Requires
 
-1. **[schema](/lib/schema.md)** - self created mongodb schema module.
-2. **[conf](/conf.md)** - self created *untracked* configuration module.
+1. **[schema](/doc/lib/schema.md)** - self created mongodb schema module.
+2. **[conf](/doc/conf.md)** - self created *untracked* configuration module.
 3. **googlemaps**
 
 ## Logic

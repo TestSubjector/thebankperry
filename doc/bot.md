@@ -13,9 +13,9 @@ This file is the entry point of the project, and does four main tasks:
 
 ## Requires
 
-1. **[conf](/conf.md)** - self created *untracked* configuration module.
-2. **[listen](/lib/listen.md)** - self created bot message processor.
-3. **[mike](/lib/mike.md)** - self created bot message broadcaster.
+1. **[conf](/doc/conf.md)** - self created *untracked* configuration module.
+2. **[listen](/doc/lib/listen.md)** - self created bot message processor.
+3. **[mike](/doc/lib/mike.md)** - self created bot message broadcaster.
 4. **telegram-bot-api**
 5. **mongoose**
 

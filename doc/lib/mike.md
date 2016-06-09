@@ -8,7 +8,7 @@ This file provides the broadcast feature for the bot - an API endpoint that can 
 
 ## Requires
 
-1. **[schema](/lib/schema.md)** - self created mongodb schema module.
+1. **[schema](/doc/lib/schema.md)** - self created mongodb schema module.
 2. **express**
 3. **cors**
 4. **cookie-parser**
