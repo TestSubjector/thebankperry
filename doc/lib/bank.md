@@ -14,7 +14,7 @@ This file creates a wrapper for the `accounts` collection in MongoDB, exporting 
 
 ## Requires
 
-1. **[schema](/lib/schema.md)** - self created bot message processor.
+1. **[schema](/lib/schema.md)** - self created mongodb schema module.
 
 ## Logic
 

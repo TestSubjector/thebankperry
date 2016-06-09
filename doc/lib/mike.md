@@ -1,55 +1,44 @@
-var mike = (function () {
-    var express = require('express');
-    var app = express();
-    var cors = require('cors');
-    var bot = null;
+# Mike
 
-    var schemas = require("./schema");
-    var Users = schemas.users;
-    var cookieParser = require('cookie-parser');
-    var bodyParser = require('body-parser');
-    app.use(cors());
+File name: /lib/[mike.js](../lib/mike.js)
 
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded());
-    app.use(cookieParser());
+## Introduction
 
-    var setbot = function (telebot) {
-        bot = telebot;
-    };
-    app.get('/', function (req, res) {
-        res.send("Post a POST request to this url with a body like: message=I am a message.");
-    });
-    
-    app.post('/mike/:message', function (req, res) {
-        //console.log(req.body);
-        var counter = 0;
-        var msg = {
-            text: req.params.message || "default"
-        };
-        
-        console.log("BROADCAST:", msg.text);
-        Users.find({}, function (err, users) {
-            if (err) {
-                console.log(err);
-                return false;
-            }
-            users.forEach(function (user) {
-                var mymsg = msg;
-                console.log("Mike: Broadcast sent to", user.id);
-                mymsg.chat_id = user.id;
-                bot.sendMessage(mymsg).catch(function (err) {
-                    console.log(err);
-                });
-            });
-        });
-        res.send("All fine, guys!");
-    });
+This file provides the broadcast feature for the bot - an API endpoint that can be used to send a message to all users of the bot. Send POST request to /mike/:message to send a broadcast
 
-    return {
-        webServer: app,
-        setBroadcastBot: setbot
-    };
-}());
+## Requires
 
-module.exports = mike;
+1. **[schema](/lib/schema.md)** - self created mongodb schema module.
+2. **express**
+3. **cors**
+4. **cookie-parser**
+5. **body-parser**
+
+## Logic
+
+1. Loads `express` and dependencies, creates an `express` instance as `var app = express();`.
+2. Defines function `setBot` to have an own instance of Telegram Bot for sending message.
+3. Adds `app.post('/mike/:message')` route which:
+    * Finds all bot users from `users` collection in mongo.
+    * Sends broadcast message using a for loop to all users.
+4. Returns the functions `setBroadcastBot` and `webServer` as a module.
+
+## Usage
+Exact code used in [bot.js](../bot.md)
+
+```
+var mike = require("./lib/mike");
+mike.setBroadcastBot(bot);
+mike.webServer.listen(3000, function () {
+    console.log('Express: Mike listening on port 3000.');
+});
+```
+
+## TODO
+
+1. Urgent: Look for pagination limitations in mongo at step `#Logic:3.1`
+2. Urgent: Add authentication before sending broadcast.
+
+## Comments
+
+Needs immediate attention.
