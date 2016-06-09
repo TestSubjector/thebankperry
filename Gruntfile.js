@@ -4,7 +4,7 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 
 grunt.initConfig({
   jshint: {
-    all: ['Gruntfile.js', 'lib/**/*.js']
+    all: ['Gruntfile.js', 'lib/**/*.js', 'bot.js']
   }
 });
 

@@ -4,6 +4,7 @@
   "description": "The Bank Perry Telegram Bot Project",
   "main": "bot.js",
   "scripts": {
+    "start": "nodejs bot.js",
     "test": "test"
   },
   "author": "Rohitt Vashishtha",

@@ -1,4 +1,3 @@
-'use strict'
 var conf = require("./conf");
 var botconf = {
     'token': conf.telegramToken,
@@ -32,6 +31,6 @@ bot.on('message', function (message) {
         console.log("REPLY: ", msg.text);
         bot.sendMessage(msg).catch(function (err) {
             console.log(err);
-        })
-    })
+        });
+    });
 });
