@@ -18,6 +18,7 @@
     "express": "^4.13.4",
     "googlemaps": "^1.6.0",
     "iconv-lite": "^0.4.13",
+    "mdoc": "^0.5.2",
     "mongodb": "^2.1.21",
     "mongoose": "^4.4.19",
     "node-wit": "^3.3.2",

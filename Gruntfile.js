@@ -12,6 +12,14 @@ grunt.registerTask('world', 'world task description', function(){
   console.log('hello world');
 });
 
+grunt.registerTask('doc', 'generates static markdown documentation', function(){
+  require('mdoc').run({
+    // configuration options (specified below)
+    inputDir: 'doc',
+    outputDir: 'dist'
+});
+});
+
 grunt.registerTask('hello', 'say hello', function(name){
   if(!name || !name.length)
     grunt.warn('you need to provide a name.');

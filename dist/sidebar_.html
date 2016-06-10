@@ -1,0 +1,302 @@
+<div class="hd">
+    <input id="search" type="search" placeholder="search" />
+    <label><input id="show-desc" type="checkbox" /> Show Description</label>
+</div>
+<div class="bd">
+    <div class="toc">
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="bot.html">bot</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="bot.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file is the entry point of the project, and does four main tasks:</span>
+                </a>
+                <a class="toc-item" href="bot.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc"><ol>
+<li><strong>conf</strong> - self created <em>untracked</em> configuration module. 2. <strong>listen</strong> - self created bot message processor.</li>
+
+<li><strong>mike</strong> - self created bot message broadcaster.</li>
+
+<li><strong>telegram-bot-api</strong></li>
+
+<li><strong>mongoose</strong></li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="bot.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc"><ol>
+<li>Loads project configuration as <code>conf</code>. 2. Specifies telegram-bot-api specific configuration, taking API key from <code>conf</code>.</li>
+
+<li>Loads message processor as <code>botMessageProcessor</code>.</li>
+
+<li>Creates a Telegram Bot object as <code>bot</code>.</li>
+
+<li>Loads and starts the Express Server as <code>mike</code>.</li>
+
+<li>Loads and connects to MongoDB using parameters in <code>conf</code>.</li>
+
+<li>Adds 'message' event listener on <code>bot</code> to pass messages to <code>botMessageProcessor</code>.</li>
+
+<li>Processes callback from <code>botMessageProcessor</code> and sends reply to user.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="bot.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">Insert random comments in this part.</span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="conf.html">conf</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="conf.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file defines the configuration variables necessary for the project to run. For obvious purposes this file is not a part of the repository.</span>
+                </a>
+                <a class="toc-item" href="conf.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc">Nothing. This is a standalone module.</span>
+                </a>
+                <a class="toc-item" href="conf.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc">Nothing logical, just a bunch of configuration variables. See for yourself:</span>
+                </a>
+                <a class="toc-item" href="conf.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">The code is obvious. Wrote the documentation for practice.</span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/bank.html">lib/bank</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="lib/bank.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file creates a wrapper for the <code>accounts</code> collection in MongoDB, exporting the following necessary functions:</span>
+                </a>
+                <a class="toc-item" href="lib/bank.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc"><ol>
+<li><strong>schema</strong> - self created mongodb schema module.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/bank.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc"><ol>
+<li>Creates a bank variable that acts as a Class and returns select few public methods. 2. Defines all the functions stated above.</li>
+
+<li>Returns the function and exports the Object as a module.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/bank.html#Usage">
+                    <h4>Usage</h4>
+                    <span class="desc">Sample code:</span>
+                </a>
+                <a class="toc-item" href="lib/bank.html#TODO">
+                    <h4>TODO</h4>
+                    <span class="desc"><ol>
+<li>Implement the <code>sendMoney</code> function. 2. Refactor the method names to make more sense.</li>
+
+<li>Refactor the callback hell.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/bank.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">Known usage: <code>/lib/listen.js</code></span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/geocode.html">lib/geocode</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="lib/geocode.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file provides the following location services for the bot:</span>
+                </a>
+                <a class="toc-item" href="lib/geocode.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc"><ol>
+<li><strong>schema</strong> - self created mongodb schema module. 2. <strong>conf</strong> - self created <em>untracked</em> configuration module.</li>
+
+<li><strong>googlemaps</strong></li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/geocode.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc"><ol>
+<li>Loads and creates Google Maps Object as <code>map</code> using API key from <code>conf</code>. 2. Loads <code>schema</code> to get <code>atms</code> MongoDB Model Object.</li>
+
+<li>Defines <code>getLocation</code> function for reverse geocoding using location name as String.
+
+
+<ul>
+<li>Async call to <code>maps.geocode</code>, with a callback.</li>
+
+<li>Callback function callbacks the response callback with the location as JSON object.</li></ul>
+</li>
+
+<li>Defines <code>getDistance</code> function to calculate distance between two points on Earth.</li>
+
+<li>Defines <code>getATMLocation</code> function to do a very bad job of finding ATM.</li>
+
+<li>Returns the above three functions as a module.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/geocode.html#Usage">
+                    <h4>Usage</h4>
+                    <span class="desc">Sample code:</span>
+                </a>
+                <a class="toc-item" href="lib/geocode.html#TODO">
+                    <h4>TODO</h4>
+                    <span class="desc"><ol>
+<li>Change the piece of shit that <code>getATMLocation</code> is. 2. Remove <code>schema</code> as a dependency of this module.</li>
+
+<li>Refactor method names and respective parts of the rest of the code.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/geocode.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">getATMLocation urgently needs to be rewritten. From scratch. Or I'll scratch my eyes off.</span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/keys.html">lib/keys</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="lib/keys.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file provides different keyboard layouts to send as reply_markup to the telegram-bot. The following functions are provided.</span>
+                </a>
+                <a class="toc-item" href="lib/keys.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc">Nothing. Is a standalone module.</span>
+                </a>
+                <a class="toc-item" href="lib/keys.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc"><ol>
+<li>Defines and returns reply<em>markup objects. 2. Read Telegram Bot API to explain resize</em>keyboard,one<em>time</em>keyboard, etc.</li>
+
+<li>Returns these functions as a module.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/keys.html#Usage">
+                    <h4>Usage</h4>
+                    <span class="desc">Sample code:</span>
+                </a>
+                <a class="toc-item" href="lib/keys.html#TODO">
+                    <h4>TODO</h4>
+                    <span class="desc"><ol>
+<li>Find a way to make resize<em>keyboard,one</em>time_keyboard, etc. parameters modifiable. 2. Experiment with and add inline keyboards where required.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/keys.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">Thing works good. Can be ignored for long.</span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/listen.html">lib/listen</a>
+            </h3>
+            <div class="toc-list">
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/mike.html">lib/mike</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="lib/mike.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file provides the broadcast feature for the bot - an API endpoint that can be used to send a message to all users of the bot. Send POST request to /mike/:message to send a broadcast</span>
+                </a>
+                <a class="toc-item" href="lib/mike.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc"><ol>
+<li><strong>schema</strong> - self created mongodb schema module. 2. <strong>express</strong></li>
+
+<li><strong>cors</strong></li>
+
+<li><strong>cookie-parser</strong></li>
+
+<li><strong>body-parser</strong></li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/mike.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc"><ol>
+<li>Loads <code>express</code> and dependencies, creates an <code>express</code> instance as <code>var app = express();</code>. 2. Defines function <code>setBot</code> to have an own instance of Telegram Bot for sending message.</li>
+
+<li>Adds <code>app.post('/mike/:message')</code> route which:
+
+
+<ul>
+<li>Finds all bot users from <code>users</code> collection in mongo.</li>
+
+<li>Sends broadcast message using a for loop to all users.</li></ul>
+</li>
+
+<li>Returns the functions <code>setBroadcastBot</code> and <code>webServer</code> as a module.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/mike.html#Usage">
+                    <h4>Usage</h4>
+                    <span class="desc">Exact code used in bot.js</span>
+                </a>
+                <a class="toc-item" href="lib/mike.html#TODO">
+                    <h4>TODO</h4>
+                    <span class="desc"><ol>
+<li>Urgent: Look for pagination limitations in mongo at step <code>#Logic:3.1</code> 2. Urgent: Add authentication before sending broadcast.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/mike.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">Needs immediate attention.</span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/schema.html">lib/schema</a>
+            </h3>
+            <div class="toc-list">
+                <a class="toc-item" href="lib/schema.html#Introduction">
+                    <h4>Introduction</h4>
+                    <span class="desc">This file defines the schema of the following 3 collections in MongoDB:</span>
+                </a>
+                <a class="toc-item" href="lib/schema.html#Requires">
+                    <h4>Requires</h4>
+                    <span class="desc"><ol>
+<li><strong>mongoose</strong></li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/schema.html#Logic">
+                    <h4>Logic</h4>
+                    <span class="desc"><ol>
+<li>Defines schemas as JSON objects. 2. Creates MongoDB models out of the schema objects.</li>
+
+<li>Exports the 3 MongoDB models as a module.</li>
+</ol></span>
+                </a>
+                <a class="toc-item" href="lib/schema.html#Usage">
+                    <h4>Usage</h4>
+                    <span class="desc">Sample code:</span>
+                </a>
+                <a class="toc-item" href="lib/schema.html#Comments">
+                    <h4>Comments</h4>
+                    <span class="desc">The code is obvious. Wrote the documentation for practice.</span>
+                </a>
+            </div>
+            <h3 class="toc-mod-title">
+                <span class="toc-mod-toggle"></span>
+                <a href="lib/wit.html">lib/wit</a>
+            </h3>
+            <div class="toc-list">
+            </div>
+    </div>
+</div>
