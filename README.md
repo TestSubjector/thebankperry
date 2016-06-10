@@ -15,7 +15,7 @@ Deployment will be lengthy and not much worth it because you'd need to have API 
 
 Following are deployment instructions for Ubuntu/Debian-based-linux-distros:
 
-```
+```js
 sudo apt install nodejs
 git clone https://github.com/TestSubjector/thebankperry.git
 cd thebankperry
@@ -23,7 +23,7 @@ sudo npm install
 cp /path/to/config/file/we/sent/you.js conf.js
 npm start
 ```
-If all went file, you'd be able to successfully run the code and test it out.
+If all went fine, you'd be able to successfully run the code and test it out.
 
 ## Contribute
 
@@ -33,5 +33,7 @@ You'd first need to browse the source code documentation and the actual files. W
 - [ ] Document listen.js and wit.js
 - [X] Implement Wit-AI
 - [X] Registration and Login System
+- [ ] Fix Registration Bugs
+- [ ] More Wit Features
 - [X] Fixing Package Issues
 - [X] Keeping Git Clean (Hopefully :P)
